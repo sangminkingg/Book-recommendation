@@ -100,7 +100,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 #데이터불러오기
-df_topreadauthor = pd.read_csv('topreadauthor.csv')
+df_topreadauthor = pd.read_csv('data/topreadauthor.csv')
 fig1, ax = plt.subplots(figsize=(10, 6))
 sns.barplot(x='count', y='author', data = df_topreadauthor, palette='Set2')
 
