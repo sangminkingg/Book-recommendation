@@ -196,6 +196,34 @@ st.pyplot(fig)
 
 
 
+st.markdown("<h3 id='part-4-publisher-analysis'>✅Part 4. 출판사 분석</h3>", unsafe_allow_html=True)
+
+
+st.write("""
+##### ✔ 평균평점이 높은 도서의 상위10위 출판사
+- 
+""")
+
+import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+#데이터불러오기
+df_year = pd.read_csv('publisher.csv')
+
+# 바차트 그리기
+fig, ax = plt.subplots(figsize=(10, 6))
+ax.bar(df['Publisher'], df['Count'])
+ax.set_title('Best Publishers Sort By Ratings')
+ax.set_xlabel('Publisher')
+ax.set_ylabel('Count')
+ax.tick_params(axis='x', labelrotation=90)
+
+# 그래프 출력하기
+st.pyplot(fig)
+
+
 
 
 
