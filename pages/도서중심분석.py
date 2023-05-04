@@ -212,16 +212,21 @@ import seaborn as sns
 #데이터불러오기
 df_year = pd.read_csv('data/publisher.csv')
 
-# 바차트 그리기
-fig, ax = plt.subplots(figsize=(10, 6))
-ax.bar(df_year['Publisher'], df_year['Book-Rating'])
-ax.set_title('Best Publishers Sort By Ratings')
-ax.set_ylabel('Publisher')
-ax.set_xlabel('Book-Rating')
-ax.set_xticklabels(ax.get_xticklabels(), rotation=50)
-ax.tick_params(axis='x', labelrotation=90)
+fig1, ax = plt.subplots(figsize=(10, 6))
+sns.barplot(x='Book-Rating', y='Publisher', data =df_year, palette='mute')
 
-# 그래프 출력하기
-st.pyplot(fig)
+# x축 레이블 90도 회전
+ax.set_xticklabels(ax.get_xticklabels(), rotation=50)
+
+# 그래프 제목 추가
+ax.set_title('Top10 Authors best rated by users', fontsize=16)
+
+# 그래프 표시하기
+st.pyplot(fig1)
+
+st.write('')
+st.write('')
+js = "window.scrollTo(0, document.getElementById('part-2-author-analysis').offsetTop);"
+
 
 
