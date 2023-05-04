@@ -5,7 +5,7 @@ import matplotlib as plt
 import plotly.express as px
 
 
-st.header('📖출판사분석')
+st.header('📖도서 중심 분석')
 
 
 st.sidebar.markdown("""
