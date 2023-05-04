@@ -178,7 +178,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 #데이터불러오기
-df_year = pd.read_csv('data/YearOfPublication.csv')
+df_year = pd.read_csv('data/YearPublication.csv')
 fig1, ax = plt.subplots(figsize=(10, 6))
 sns.histplot(data =df_year, x='Year-Of-Publication', bins=50)
 
