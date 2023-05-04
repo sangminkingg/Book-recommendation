@@ -184,12 +184,15 @@ df_year = pd.read_csv('data/YearPublication (1).csv')
 year_counts = df_year['Year-Of-Publication'].value_counts()
 
 # 그래프 그리기
-plt.figure(figsize=(10, 6))
-plt.bar(year_counts.index, year_counts.values)
-plt.title("Year-Of-Publication counts")
-plt.xlabel("Year")
-plt.ylabel("Count")
-plt.show()
+fig, ax = plt.subplots(figsize=(10, 6))
+ax.bar(year_counts.index, year_counts.values)
+ax.set_title("Year-Of-Publication counts")
+ax.set_xlabel("Year")
+ax.set_ylabel("Count")
+
+# 그래프 출력하기
+st.pyplot(fig)
+
 
 
 
