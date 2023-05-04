@@ -78,19 +78,9 @@ import seaborn as sns
 
 # 데이터 불러오기
 
-df_avg = pd.read_csv('data/goodratingbooks.csv')
+df_goodrating = pd.read_csv('data/goodratingbooks.csv')
+df_goodrating
 
-fig3, ax = plt.subplots(figsize=(10, 6))
-sns.barplot(x='avg_rating', y='Book-Title', data=df_avg,palette='Set1')
-
-# x축 레이블 90도 회전
-ax.set_xticklabels(ax.get_xticklabels(), rotation=50)
-
-# 그래프 제목 추가
-ax.set_title('Top10 Books most read by users', fontsize=16)
-
-# 그래프 표시하기
-st.pyplot(fig3)
 
 st.write('')
 st.write('')
