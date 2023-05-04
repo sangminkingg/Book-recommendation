@@ -134,7 +134,10 @@ st.write('')
 
 st.write("""
 ##### ✔ 유저들의 평균평점이 높았던  상위10 인기 작가 
-- 유저들의 평균평점이 높았던 작가는 Clamp(6.18점), Shel Silverstein(6.08점), Nick Bantock Antoine de Saint-Exupéry (5.74점), Dr. Seuss(5.67) 순 이다. 
+- 유저들의 평균평점이 높았던 작가는 Clamp(6.18점), Shel Silverstein(6.08점), Nick Bantock Antoine de Saint-Exupéry (5.74점), Dr. Seuss(5.67) 순 이다.
+- 해당 작가들의 다른 작품들 중 유저들이 높은 평점을 부여한 작품들을 우선적으로 추천하는 방식으로 책 추천 시스템을 구성할 수 있다. 
+- 해당 작가의 책에 대한 평점이 높다는 것은 해당 작가의 책을 많이 읽고 그 중에서도 높은 평점을 부여한 유저들이 많다는 것을 의미한다. 
+- 따라서 해당 작가의 책을 추천할 때 가중치를 부여하여 더 높은 우선순위로 추천해줄 수 있다.
 """)
 import streamlit as st
 import pandas as pd
