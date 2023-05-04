@@ -36,8 +36,8 @@ st.write("""
 """)
 # 데이터 불러오기 
 df_book = pd.read_csv('data/books.csv')
-df_book.head(10) 
 
+df_book
 
 
 st.write("""
