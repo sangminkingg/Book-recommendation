@@ -167,7 +167,7 @@ st.markdown("<h3 id='part-3-year_publication-analysis'>✅Part 3. 출판년도 �
 
 st.write("""
 ##### ✔ 유저들이 가장 많이 찾은 상위10 인기 작가 
-- 이상치 확인, 1950년보다 작거나 2010년보다 큰 값을 가지는 셀에 대해, 해당 셀을 NaN으로 변환 후,해당 결측치를 평균값으로 대체
+- 이상치 확인,-1 값 또는 1950년보다 작거나 2010년보다 큰 값을 가지는 셀에 대해, 해당 셀을 NaN으로 변환 후,해당 결측치를 평균값으로 대체
 - 최근으로 갈 수 록 출판이 많은 것으로 보여짐. 
 """)
 
@@ -178,7 +178,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 #데이터불러오기
-df_year = pd.read_csv('data/YearPublication.csv')
+df_year = pd.read_csv('data/YearPublication(1).csv')
 fig1, ax = plt.subplots(figsize=(10, 6))
 sns.histplot(data =df_year, x='Year-Of-Publication', bins=50)
 
