@@ -30,13 +30,6 @@ df = pd.DataFrame({
 
 st.dataframe(df)
 
-
-
-st.write(""" 
-## ✅ Insight
-""")
-
-
 st.write(""" 
 ### ✅ 프로젝트 배경
 #### ✔ 넷플릭스처럼 초등학생에게 알고리즘으로 읽을 책을 추천해준다.
