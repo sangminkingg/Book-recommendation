@@ -102,7 +102,7 @@ import seaborn as sns
 #데이터불러오기
 df_topreadauthor = pd.read_csv('topreadauthor.csv')
 fig1, ax = plt.subplots(figsize=(10, 6))
-sns.barplot(x='N_ratings', y='Book-Title', data = df_topreadauthor, palette='Set1')
+sns.barplot(x='count', y='author', data = df_topreadauthor, palette='Set2')
 
 # x축 레이블 90도 회전
 ax.set_xticklabels(ax.get_xticklabels(), rotation=50)
