@@ -27,7 +27,7 @@ st.write('')
 js = "window.scrollTo(0, document.getElementById('part-1-age-analysis').offsetTop);"
 
     
-st.markdown("<h3 id='part-1-age-analysis'>✅Part 1. 도서 분석</h3>", unsafe_allow_html=True)
+st.markdown("<h3 id='part-1-book-analysis'>✅Part 1. 도서 분석</h3>", unsafe_allow_html=True)
 
 st.write('')
 st.write('')
@@ -84,15 +84,15 @@ df_goodrating
 
 st.write('')
 st.write('')
-js = "window.scrollTo(0, document.getElementById('part-2-location-analysis').offsetTop);"
+js = "window.scrollTo(0, document.getElementById('part-2-author-analysis').offsetTop);"
 
 st.write('')
 st.write('')
 
 
 st.write("""
-##### ✔ 유저들이 가장 많이 찾은 상위10 작가 
-
+##### ✔ 유저들이 가장 많이 찾은 상위10 인기 작가 
+- 유저들의 도서 이용 횟수 기준 상위 작가는 Stephen King(8467회), Nora Roberts(6934회), John Grisham(5283회), James Patterson(5020회)이다. 
 """)
 import streamlit as st
 import pandas as pd
@@ -114,6 +114,44 @@ ax.set_title('Top10 Books most read by users', fontsize=16)
 st.pyplot(fig1)
 
 
+st.write('')
+st.write('')
+js = "window.scrollTo(0, document.getElementById('part-2-author-analysis').offsetTop);"
+
+st.write('')
+st.write('')
+
+
+
+st.write("""
+##### ✔ 유저들의 평균평점이 높았던  상위10 인기 작가 
+- 유저들의 평균평점이 높았던 작가는 Clamp(6.18점), Shel Silverstein(6.08점), Nick Bantock Antoine de Saint-Exupéry (5.74점), Dr. Seuss(5.67) 순 이다. 
+""")
+import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+#데이터불러오기
+df_topratingauthor = pd.read_csv('data/topratingauthor.csv')
+fig1, ax = plt.subplots(figsize=(10, 6))
+sns.barplot(x='count', y='author', data = df_topreadauthor, palette='Set4')
+
+# x축 레이블 90도 회전
+ax.set_xticklabels(ax.get_xticklabels(), rotation=50)
+
+# 그래프 제목 추가
+ax.set_title('Top10 Books most rated by users', fontsize=16)
+
+# 그래프 표시하기
+st.pyplot(fig1)
+
+st.write('')
+st.write('')
+js = "window.scrollTo(0, document.getElementById('part-2-author-analysis').offsetTop);"
+
+st.write('')
+st.write('')
 
 
 
