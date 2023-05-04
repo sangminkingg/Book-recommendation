@@ -31,13 +31,7 @@ st.markdown("<h3 id='part-1-age-analysis'>✅Part 1. 도서 분석</h3>", unsafe
 
 st.write('')
 st.write('')
-st.write("""
-- 도서별 정보 및 이용횟수와 평균 평점을 볼 수 있다. 
-""")
-# 데이터 불러오기 
-df_book = pd.read_csv('data/books.csv')
 
-df_book
 
 
 st.write("""
