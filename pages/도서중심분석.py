@@ -164,9 +164,11 @@ js = "window.scrollTo(0, document.getElementById('part-3-year_publication-analys
 
 st.markdown("<h3 id='part-3-year_publication-analysis'>✅Part 3. 출판년도 분석</h3>", unsafe_allow_html=True)
 
-##### ✔ 출판년도 전처리  
+
+st.write("""
+##### ✔ 유저들이 가장 많이 찾은 상위10 인기 작가 
 - 이상치 확인, 1950년보다 작거나 2010년보다 큰 값을 가지는 셀에 대해, 해당 셀을 NaN으로 변환 후,해당 결측치를 평균값으로 대체
-- 최근으로 갌 수 출판이 많은 것으로 보여짐.
+- 최근으로 갈 수 록 출판이 많은 것으로 보여짐. 
 """)
 
 
