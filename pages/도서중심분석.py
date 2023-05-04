@@ -102,6 +102,8 @@ st.write('')
 st.write("""
 ##### ✔ 유저들이 가장 많이 찾은 상위10 인기 작가 
 - 유저들의 도서 이용 횟수 기준 상위 작가는 Stephen King(8467회), Nora Roberts(6934회), John Grisham(5283회), James Patterson(5020회)이다. 
+- 온오프라인 서점에 적용한다면 해당 작가들의 새로운 작품 출시, 이벤트 및 프로모션을 유저들에게 알리는 마케팅 전략을 세울 수 있다. 
+- 해당 작가들의 작품 중에서도 이용 횟수가 높은 작품을 추천해주는 추천 시스템을 구축할 수 있다. 
 """)
 import streamlit as st
 import pandas as pd
