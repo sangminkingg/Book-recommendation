@@ -164,11 +164,28 @@ js = "window.scrollTo(0, document.getElementById('part-3-year_publication-analys
 
 st.markdown("<h3 id='part-3-year_publication-analysis'>✅Part 3. 출판년도 분석</h3>", unsafe_allow_html=True)
 
-st.write('')
-st.write('')
+##### ✔ 출판년도 전처리  
+- 이상치 확인, 1950년보다 작거나 2010년보다 큰 값을 가지는 셀에 대해, 해당 셀을 NaN으로 변환 후,해당 결측치를 평균값으로 대체
+- 최근으로 갌 수 출판이 많은 것으로 보여짐.
+""")
 
 
+import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 
+#데이터불러오기
+df_year = pd.read_csv('data/YearOfPublication.csv')
+fig1, ax = plt.subplots(figsize=(10, 6))
+sns.hist(data =df_year, palette='pastel')
+
+
+# 그래프 제목 추가
+ax.set_title('Top10 Authors best rated by users', fontsize=16)
+
+# 그래프 표시하기
+st.pyplot(fig1)
 
 
 
