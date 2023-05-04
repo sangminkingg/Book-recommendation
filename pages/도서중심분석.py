@@ -226,7 +226,7 @@ st.pyplot(fig1)
 
 st.write('')
 st.write('')
-js = "window.scrollTo(0, document.getElementById('part-2-author-analysis').offsetTop);"
+js = "window.scrollTo(0, document.getElementById('part-4-publisher-analysis').offsetTop);"
 
 
 
