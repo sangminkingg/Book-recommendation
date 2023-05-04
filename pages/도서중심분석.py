@@ -214,10 +214,11 @@ df_year = pd.read_csv('data/publisher.csv')
 
 # 바차트 그리기
 fig, ax = plt.subplots(figsize=(10, 6))
-ax.bar(df_year['Publisher'], df_year['Count'])
+ax.bar(df_year['Publisher'], df_year['Book-Rating'])
 ax.set_title('Best Publishers Sort By Ratings')
-ax.set_xlabel('Publisher')
-ax.set_ylabel('Count')
+ax.set_ylabel('Publisher')
+ax.set_xlabel('Book-Rating')
+ax.set_xticklabels(ax.get_xticklabels(), rotation=50)
 ax.tick_params(axis='x', labelrotation=90)
 
 # 그래프 출력하기
