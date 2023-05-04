@@ -214,7 +214,7 @@ df_year = pd.read_csv('data/publisher.csv')
 
 # 바차트 그리기
 fig, ax = plt.subplots(figsize=(10, 6))
-ax.bar(df['Publisher'], df['Count'])
+ax.bar(df_year['Publisher'], df_year['Count'])
 ax.set_title('Best Publishers Sort By Ratings')
 ax.set_xlabel('Publisher')
 ax.set_ylabel('Count')
@@ -222,13 +222,5 @@ ax.tick_params(axis='x', labelrotation=90)
 
 # 그래프 출력하기
 st.pyplot(fig)
-
-
-
-
-
-
-
-
 
 
