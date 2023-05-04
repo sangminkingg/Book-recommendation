@@ -24,7 +24,7 @@ st.write('')
 
 
 
-js = "window.scrollTo(0, document.getElementById('part-1-age-analysis').offsetTop);"
+js = "window.scrollTo(0, document.getElementById('part-1-book-analysis').offsetTop);"
 
     
 st.markdown("<h3 id='part-1-book-analysis'>✅Part 1. 도서 분석</h3>", unsafe_allow_html=True)
@@ -84,7 +84,13 @@ df_goodrating
 
 st.write('')
 st.write('')
-js = "window.scrollTo(0, document.getElementById('part-2-author-analysis').offsetTop);"
+
+
+
+js = "window.scrollTo(0, document.getElementById('part-1-book-analysis').offsetTop);"
+
+    
+st.markdown("<h3 id='part-2-author-analysis'>✅Part 2. 도서 분석</h3>", unsafe_allow_html=True)
 
 st.write('')
 st.write('')
