@@ -179,15 +179,15 @@ import seaborn as sns
 
 #데이터불러오기
 df_year = pd.read_csv('data/YearPublication (1).csv')
-fig1, ax = plt.subplots(figsize=(10, 6))
-sns.histplot(data =df_year, x='Year-Of-Publication', bins=50)
+# 각 연도별 빈도수 구하기
+year_counts = df_year.value_counts()
 
-
-# 그래프 제목 추가
-ax.set_title('yearofpublication', fontsize=16)
-
-# 그래프 표시하기
-st.pyplot(fig1)
-
+# 그래프 그리기
+plt.figure(figsize=(10, 6))
+plt.bar(year_counts.index, year_counts.values)
+plt.title("Year-Of-Publication counts")
+plt.xlabel("Year")
+plt.ylabel("Count")
+plt.show()
 
 
