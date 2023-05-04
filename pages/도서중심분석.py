@@ -113,15 +113,6 @@ ax.set_title('Top10 Books most read by users', fontsize=16)
 # 그래프 표시하기
 st.pyplot(fig1)
 
-# x축 레이블 90도 회전
-ax.set_xticklabels(ax.get_xticklabels(), rotation=50)
-
-# 그래프 제목 추가
-ax.set_title('Top10 Authors by N_rating', fontsize=16)
-
-# 그래프 표시하기
-st.pyplot(fig1)
-
 
 
 
