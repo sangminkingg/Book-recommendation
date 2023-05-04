@@ -9,7 +9,7 @@ st.header('📖출판사분석')
 
 
 st.sidebar.markdown("""
-    ## 출판사 분석
+    ## 도서 중심 분석
     - [part 1. 도서 분석](#part-1-book-analysis)
     - [part 2. 작가 분석](#part-2-author-analysis)
     - [part 3. 출판년도 분석](#part-3-year_publication-analysis)
