@@ -90,7 +90,7 @@ st.write('')
 js = "window.scrollTo(0, document.getElementById('part-1-book-analysis').offsetTop);"
 
     
-st.markdown("<h3 id='part-2-author-analysis'>✅Part 2. 도서 분석</h3>", unsafe_allow_html=True)
+st.markdown("<h3 id='part-2-author-analysis'>✅Part 2.  분석</h3>", unsafe_allow_html=True)
 
 st.write('')
 st.write('')
@@ -158,6 +158,19 @@ js = "window.scrollTo(0, document.getElementById('part-2-author-analysis').offse
 
 st.write('')
 st.write('')
+
+
+js = "window.scrollTo(0, document.getElementById('part-3-year_publication-analysis').offsetTop);"
+
+st.markdown("<h3 id='part-3-year_publication-analysis'>✅Part 3. 출판년도 분석</h3>", unsafe_allow_html=True)
+
+st.write('')
+st.write('')
+
+
+
+
+
 
 
 
