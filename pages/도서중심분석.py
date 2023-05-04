@@ -36,8 +36,8 @@ st.write('')
 
 st.write("""
 ##### ✔ 상위 10위 도서별 이용횟수
-- Rich Shapero 작가의 wildAnimus 가 가장 이용률이 높게 나왔다.  
-- 가장 많이 이용한 도서는 WildAnimus by Rich Shapero , The Davinchi Code by Dan Brown, The Lovely Bones: A Novel, Divine Secrets of the Ya-Ya Sisterhood: A Novel by Alice Sebold 이다. 
+- Rich Shapero 작가의 "wildAnimus" 가 가장 이용률이 높게 나왔다.  
+- 가장 많이 이용한 도서는 차례로 WildAnimus by Rich Shapero , The Davinchi Code by Dan Brown, The Lovely Bones: A Novel, Divine Secrets of the Ya-Ya Sisterhood: A Novel by Alice Sebold 이다. 
 """)
 import streamlit as st
 import pandas as pd
@@ -59,3 +59,43 @@ ax.set_title('Top10 Books most read by users', fontsize=16)
 
 # 그래프 표시하기
 st.pyplot(fig1)
+
+st.write('')
+st.write('')
+
+
+
+
+st.write("""
+##### ✔ 상위 10위 도서별 평균 평점
+- 도서당 평점의 갯수의 평균이 3.57이므로 N_ratings(이용 후기 개수)가 4 개이상 중 가장 평점좋은 도서는 다음과 같다
+
+""")
+import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# 데이터 불러오기
+
+df_avg = pd.read_csv('data/goodratingbooks.csv')
+
+fig3, ax = plt.subplots(figsize=(10, 6))
+sns.barplot(x='avg_rating', y='Book-Title', data=df_avg,palette='Set1')
+
+# x축 레이블 90도 회전
+ax.set_xticklabels(ax.get_xticklabels(), rotation=50)
+
+# 그래프 제목 추가
+ax.set_title('Top10 Books most read by users', fontsize=16)
+
+# 그래프 표시하기
+st.pyplot(fig3)
+
+st.write('')
+st.write('')
+js = "window.scrollTo(0, document.getElementById('part-2-location-analysis').offsetTop);"
+
+
+
+
