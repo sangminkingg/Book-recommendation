@@ -180,16 +180,14 @@ import seaborn as sns
 #데이터불러오기
 df_year = pd.read_csv('data/YearOfPublication.csv')
 fig1, ax = plt.subplots(figsize=(10, 6))
-sns.hist(data =df_year, palette='pastel')
+sns.histplot(data =df_year, x='Year-Of-Publication', bins=50)
 
 
 # 그래프 제목 추가
-ax.set_title('Top10 Authors best rated by users', fontsize=16)
+ax.set_title('yearofpublication', fontsize=16)
 
 # 그래프 표시하기
 st.pyplot(fig1)
-
-
 
 
 
