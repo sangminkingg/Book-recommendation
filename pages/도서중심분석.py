@@ -123,7 +123,6 @@ ax.set_title('Top10 Authors by N_rating', fontsize=16)
 st.pyplot(fig1)
 
 
-st.write('')
-st.write('')
+
 
 
