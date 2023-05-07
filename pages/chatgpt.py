@@ -1,7 +1,7 @@
 import openai
 import streamlit as st
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 def get_assistant_response(messages):
     completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=messages)
