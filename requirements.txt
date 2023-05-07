@@ -8,3 +8,5 @@ matplotlib
 koreanize-matplotlib
 beautifulsoup4
 scikit-learn==0.24.2
+surprise
+tensorflow==2.5.0
