@@ -51,7 +51,6 @@ st.write("""
 ✔ 아이템기반 협업필터링
 - 아이템 기반 협업 필터링(Item-based Collaborative Filtering)은 사용자가 아닌 아이템을 중심으로 유사도를 계산하여 추천하는 방식. 사용자가 평가한 아이템들의 유사도를 계산하여 추천하고자 하는 아이템과 가장 유사한 아이템들을 찾아서 추천한다.
 """)
-st.write('✔ 아이템기반 협업필터링')
 
 # 데이터 불러오기
 train = pd.read_csv('data/TRAIN.csv')
